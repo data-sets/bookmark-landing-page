@@ -6,7 +6,7 @@ export default class Navigation extends Component {
     return (
       <>
         <header className="header-section">
-          <div className="container">
+          <div className="header-section__container">
             <div>
               <h1>A Simple Bookmark Manager</h1>
               <p>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Logo from "../images/logo-bookmark.svg";
+import Menu from "../images/icon-hamburger.svg";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 export default class Navigation extends Component {
@@ -15,7 +16,7 @@ export default class Navigation extends Component {
             <div>
               <img src={Logo} alt="Book Mark Logo" />
             </div>
-            <ul>
+            <ul className="hide-for-mobile">
               <li>
                 <Link
                   activeClass="active"
@@ -58,6 +59,11 @@ export default class Navigation extends Component {
               <li>
                 <a href="/">Login</a>
               </li>
+            </ul>
+            <ul className="hide-for-desktop">
+              <button>
+                <img src={Menu} alt="Hamburger Menu" />
+              </button>
             </ul>
           </div>
         </nav>

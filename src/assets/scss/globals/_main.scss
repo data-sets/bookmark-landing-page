@@ -79,11 +79,18 @@ ul {
 .header-section {
   position: relative;
   padding-top: 80px;
+  &__container {
+    width: 100%;
+    max-width: 1104px;
+    margin: 0 auto;
+  }
+
   & > div {
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
     & > div {
       p {
         line-height: 1.7;
@@ -113,14 +120,28 @@ ul {
       border-radius: 180px;
       z-index: -1;
     }
+    img {
+      max-width: 100%;
+      width: 579px;
+      height: 386px;
+    }
   }
 }
 
 @media (max-width: 768px) {
   .header-section {
-    & > div {
-      display: grid;
-      order: 1;
+    .container {
+      div {
+        display: grid;
+        order: 1;
+      }
+    }
+  }
+  .nav-section {
+    &__content {
+      .hide-for-mobile {
+        display: none;
+      }
     }
   }
 }
