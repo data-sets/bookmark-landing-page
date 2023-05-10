@@ -198,7 +198,11 @@ ul {
           font-size: calc(0.875rem + 0.875vw);
           padding-bottom: 35px;
         }
-
+        p {
+          line-height: 1.7;
+          margin-bottom: 40px;
+          font-size: 1rem;
+        }
         button {
           background: v.$soft-blue;
           color: v.$white;
