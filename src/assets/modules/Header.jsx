@@ -6,6 +6,9 @@ export default class Navigation extends Component {
     return (
       <>
         <header className="header-section">
+          <div className="header-section__illustration">
+            <div></div>
+          </div>
           <div className="header-section__container">
             <div>
               <h1>A Simple Bookmark Manager</h1>
@@ -21,10 +24,10 @@ export default class Navigation extends Component {
             </div>
             <div className="header-section__illustration">
               <img src={Illustration} alt="Illustration" />
-              <div></div>
             </div>
           </div>
         </header>
+
         <section className="features-section">
           <div className="features-section__container">
             <div>
