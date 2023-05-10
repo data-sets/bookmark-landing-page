@@ -124,10 +124,10 @@ ul {
     div {
       position: absolute;
       z-index: -1;
-      width: 555px;
+      width: 100%;
       height: 300px;
-      border-top-left-radius: 180px;
-      border-bottom-left-radius: 180px;
+      border-radius: 180px;
+
       background-color: v.$soft-blue;
       top: 130px;
       left: 150px;
