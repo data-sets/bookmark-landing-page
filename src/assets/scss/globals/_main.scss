@@ -114,11 +114,23 @@ ul {
     }
   }
   &__illustration {
+    position: relative;
     display: grid;
     justify-content: center;
     align-items: center;
     img {
       max-width: 100%;
+    }
+    div {
+      position: absolute;
+      z-index: -1;
+      width: 1000px;
+      height: 300px;
+      border-top-left-radius: 180px;
+      border-bottom-left-radius: 180px;
+      background-color: v.$soft-blue;
+      top: 130px;
+      left: 150px;
     }
   }
 }
