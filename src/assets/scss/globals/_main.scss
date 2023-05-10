@@ -84,6 +84,7 @@ ul {
 .header-section {
   position: relative;
   padding-top: 80px;
+
   &__container {
     width: 100%;
     max-width: 1104px;
@@ -92,9 +93,9 @@ ul {
   & > div {
     display: grid;
     justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    align-items: center;
     & > div {
       p {
         line-height: 1.7;
@@ -113,17 +114,9 @@ ul {
     }
   }
   &__illustration {
-    .shape {
-      position: absolute;
-      top: 210px;
-      margin-left: 160px;
-      background-color: v.$soft-blue;
-      width: 1000px;
-      height: 352px;
-      border-radius: 1 80px;
-      z-index: -1;
-      border-radius: 150px;
-    }
+    display: grid;
+    justify-content: center;
+    align-items: center;
     img {
       max-width: 100%;
     }
