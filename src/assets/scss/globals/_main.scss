@@ -64,6 +64,7 @@ ul {
       text-transform: uppercase;
       font-size: 1rem;
       li {
+        font-size: 1.25rem;
         &:last-child {
           a {
             background-color: v.$soft-red;
@@ -128,7 +129,7 @@ ul {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 365px) {
   .header-section {
     .container {
       div {
