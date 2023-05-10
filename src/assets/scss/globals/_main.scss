@@ -173,7 +173,7 @@ ul {
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 50px;
     img {
       width: 100%;
@@ -198,10 +198,7 @@ ul {
           font-size: calc(0.875rem + 0.875vw);
           padding-bottom: 35px;
         }
-        p {
-          line-height: 1.7;
-          margin-bottom: 40px;
-        }
+
         button {
           background: v.$soft-blue;
           color: v.$white;
