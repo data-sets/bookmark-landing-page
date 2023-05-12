@@ -266,12 +266,14 @@ ul {
     max-width: 1104px;
     margin: 0 auto;
     div {
+      width: 100%;
       &:first-child {
         text-align: center;
-        max-width: 525px;
+
         width: 100%;
         margin: 0 auto;
-
+        padding-inline: 30px;
+        padding-block-end: 35px;
         h2 {
           font-size: calc(1rem + 0.875vw);
           padding-bottom: 20px;
@@ -288,6 +290,7 @@ ul {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 34px;
     position: relative;
+
     button {
       background-color: v.$soft-blue;
       color: v.$white;
@@ -464,13 +467,6 @@ ul {
           display: flex;
           align-items: center;
           gap: 20px;
-          li {
-            a {
-              img {
-                background-color: red;
-              }
-            }
-          }
         }
       }
     }
@@ -621,8 +617,60 @@ ul {
       }
     }
   }
-  .browser-extension-section {
-    padding: 0 40px;
+  .faq-section {
+    h2,
+    p {
+      margin-inline: 20px;
+    }
+    div {
+      &:last-child {
+        ul {
+          margin-inline: 20px;
+        }
+      }
+    }
+  }
+
+  .footer-contact-section {
+    padding: 50px 20px;
+    &__container {
+      h2,
+      h5 {
+        padding: 10px 0;
+      }
+    }
+  }
+
+  .footer-links {
+    div {
+      ul {
+        li {
+          padding-bottom: 20px;
+        }
+      }
+      &:last-child {
+        padding: 0;
+        & > ul {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+    &__section {
+      text-align: center;
+      display: block;
+    }
+  }
+}
+.browser-extension-section {
+  &__browser {
+    div {
+      &:first-child {
+        width: 85%;
+      }
+      margin: 0 auto;
+      width: 85%;
+    }
   }
 }
 
