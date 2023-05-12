@@ -62,7 +62,6 @@ export default class Navigation extends Component {
                 <div>
                   <img src={Illustration1} alt="Illustration" />
                 </div>
-                <div></div>
               </div>
               <div>
                 <h3>Bookmark in one click</h3>
@@ -75,6 +74,7 @@ export default class Navigation extends Component {
               </div>
             </div>
           </div>
+          <div className="features-section__shape"></div>
         </section>
       </>
     );
