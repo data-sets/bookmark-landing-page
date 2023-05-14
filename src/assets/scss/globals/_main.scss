@@ -265,6 +265,7 @@ ul {
     width: 100%;
     max-width: 1104px;
     margin: 0 auto;
+    font-size: inherit;
     div {
       width: 100%;
       &:first-child {
@@ -275,7 +276,6 @@ ul {
         padding-inline: 30px;
         padding-block-end: 35px;
         h2 {
-          font-size: calc(1rem + 0.875vw);
           padding-bottom: 20px;
         }
         p {
