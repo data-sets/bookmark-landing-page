@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Logo from "../images/logo-bookmark.svg";
+import Logo from "../images/logo-bookmark.png";
 import Facebook from "../images/icon-facebook.svg";
 import Twitter from "../images/icon-twitter.svg";
 

@@ -460,6 +460,9 @@ ul {
           display: flex;
           align-items: center;
           gap: 20px;
+          img {
+            width: 150px;
+          }
         }
       }
       &:last-child {
@@ -542,9 +545,7 @@ ul {
         &:last-child {
           text-align: center;
           margin-top: 30px;
-          h3 {
-            font-size: 1.25rem;
-          }
+
           p {
             padding-inline: 20px;
           }
