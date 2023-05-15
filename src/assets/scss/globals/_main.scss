@@ -536,6 +536,15 @@ ul {
           display: flex;
           align-items: center;
           gap: 20px;
+          li {
+            a {
+              font-size: 1.25rem;
+              color: white;
+              &:hover {
+                color: v.$soft-red;
+              }
+            }
+          }
         }
       }
     }

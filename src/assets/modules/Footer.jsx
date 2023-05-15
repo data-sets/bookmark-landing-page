@@ -41,12 +41,12 @@ export default class Footer extends Component {
               <ul>
                 <li>
                   <a href="/">
-                    <img src={Facebook} alt="Facebook Logo" />
+                    <i className="fa fa-facebook"></i>
                   </a>
                 </li>
                 <li>
                   <a href="/">
-                    <img src={Twitter} alt="Twitter Logo" />
+                    <i className="fa fa-twitter"></i>
                   </a>
                 </li>
               </ul>
