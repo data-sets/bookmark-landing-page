@@ -67,7 +67,7 @@ ul {
       display: flex;
       gap: 40px;
       text-transform: uppercase;
-      font-size: 1rem;
+      font-size: 16px;
       li {
         a {
           transition: 1s;
@@ -85,7 +85,7 @@ ul {
             transition: 1s;
             &:hover {
               background: v.$white;
-              color: v.$very-dark-blue;
+              color: v.$soft-red;
               border: 2px solid v.$soft-red;
             }
           }
@@ -103,6 +103,12 @@ ul {
     width: 100%;
     max-width: 1104px;
     margin: 0 auto;
+    h1 {
+      padding-block: 20px;
+    }
+    p {
+      padding-bottom: 20px;
+    }
   }
   & > div {
     display: grid;
@@ -196,6 +202,22 @@ ul {
         p {
           line-height: 1.7;
           padding-bottom: 50px;
+        }
+      }
+      &:last-child {
+        button {
+          background-color: v.$soft-blue;
+          color: v.$white;
+          padding: 20px 40px;
+          font-family: inherit;
+          margin-top: 20px;
+          border-radius: 5px;
+          transition: 0.2s;
+          &:hover {
+            background-color: v.$white;
+            color: v.$soft-blue;
+            border: 2px solid v.$soft-blue;
+          }
         }
       }
     }
@@ -358,48 +380,85 @@ ul {
         }
       }
       &:last-child {
-        max-width: 525px;
+        width: 100%;
+        max-width: 625px;
         margin: 0 auto;
-        ul {
-          margin-top: 50px;
-          border-block: 1px solid hsla(229, 8%, 60%, 0.3);
-          li {
-            display: flex;
-            justify-content: space-evenly;
-            cursor: pointer;
-            padding: 15px 0;
-            h3 {
-              font-family: inherit;
-              font-size: 1rem;
-              font-weight: normal;
-              text-align: left;
-            }
-            &:nth-child(2) {
-              border-block: 1px solid hsla(229, 8%, 60%, 0.3);
-            }
-            &:nth-child(3) {
-              border-bottom: 1px solid hsla(229, 8%, 60%, 0.3);
+        div {
+          display: grid;
+          justify-content: center;
+          button {
+            background: v.$soft-blue;
+            color: v.$white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 50px;
+            transition: 0.5s ease-in-out;
+            &:hover {
+              border: 2px solid v.$soft-blue;
+              background-color: v.$white;
+              color: v.$soft-blue;
             }
           }
         }
-
-        .btn-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        ul {
           margin-top: 40px;
-          &__btn {
-            background: v.$soft-blue;
-            color: v.$white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-family: inherit;
+          li {
+            border-top: 1px solid #d7d7d7;
+            &:last-child {
+              border-bottom: 1px solid #d7d7d7;
+            }
+            button {
+              font-size: 1rem;
+              text-align: left;
+              display: flex;
+              flex-wrap: wrap;
+              width: 100%;
+              justify-content: space-between;
+              align-items: center;
+              padding: 18px 8px;
+              cursor: pointer;
+              border: none;
+              background: none;
+              font-family: v.$font-stack;
+              &:hover {
+                color: v.$soft-red;
+              }
+            }
+            .answer_wrapper {
+              height: 0;
+              overflow: hidden;
+              transition: height ease 0.2s;
+              .answer {
+                text-align: left;
+                padding: 20px 6px;
+                color: v.$grayish-blue;
+                line-height: 1.7;
+              }
+            }
           }
         }
       }
     }
   }
 }
+
+.accordion {
+  list-style: none;
+}
+
+.control {
+  font-size: 20px;
+  .arrow {
+    rotate: 180deg;
+  }
+}
+
+/* activate toggle */
+.accordion_item.active .button span {
+  color: red;
+}
+
 .footer-contact-section {
   background-color: v.$soft-blue;
   padding: 50px 70px;
@@ -434,6 +493,13 @@ ul {
         color: v.$white;
         padding-inline: 20px;
         height: 40px;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: v.$white;
+          border: 2px solid v.$soft-red;
+          color: v.$soft-red;
+        }
       }
     }
   }
