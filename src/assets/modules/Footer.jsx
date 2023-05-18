@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Logo from "../images/logo-bookmark.svg";
+import Logo from "../images/logo-bookmark.png";
 import Facebook from "../images/icon-facebook.svg";
 import Twitter from "../images/icon-twitter.svg";
 import BookMark from "../images/logo-bookmark-1.png";
@@ -43,12 +43,12 @@ export default class Footer extends Component {
               <ul>
                 <li>
                   <a href="/">
-                    <img src={Facebook} alt="Facebook Logo" />
+                    <i className="fa fa-facebook"></i>
                   </a>
                 </li>
                 <li>
                   <a href="/">
-                    <img src={Twitter} alt="Twitter Logo" />
+                    <i className="fa fa-twitter"></i>
                   </a>
                 </li>
               </ul>
