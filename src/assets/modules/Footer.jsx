@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Logo from "../images/logo-bookmark.svg";
 import Facebook from "../images/icon-facebook.svg";
 import Twitter from "../images/icon-twitter.svg";
+import BookMark from "../images/logo-bookmark-1.png";
 
 export default class Footer extends Component {
   render() {
@@ -24,6 +25,7 @@ export default class Footer extends Component {
                 <li>
                   <a href="/">
                     <img src={Logo} alt="Logo" />
+                    <img src={BookMark} alt="Logo" />
                   </a>
                 </li>
                 <li>
