@@ -1,11 +1,12 @@
-// import React, { useState } from "react";
-// import TabNavItem from "./TabNavItem";
-// import TabContent from "./TabContent";
+import React, { useState } from "react";
+import TabNavItem from "./TabNavItem";
+import TabContent from "./TabContent";
 import Illustration from "../images/illustration-hero.svg";
 import Illustration1 from "../images/illustration-features-tab-1.svg";
-
+import Illustration2 from "../images/illustration-features-tab-2.svg";
+import Illustration3 from "../images/illustration-features-tab-3.svg";
 const Header = () => {
-  // const [activeTab, setActiveTab] = useState("tab1");
+  const [activeTab, setActiveTab] = useState("tab1");
 
   return (
     <>
@@ -36,7 +37,7 @@ const Header = () => {
         <div className="features-section__container">
           <div>
             <h2>Features</h2>
-            <p>
+            <p className="description">
               Our aim is to make it quick and easy for you to access your
               favourite websites. Your bookmarks sync between your devices so
               you can access them on the go.
@@ -44,77 +45,81 @@ const Header = () => {
           </div>
           <div className="features-section__navigation">
             <ul>
-              <li>
-                <button>
-                  <h3>Simple Bookmarking</h3>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <h3>Speedy Searching</h3>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <h3>Easy Sharing</h3>
-                </button>
-              </li>
+              <TabNavItem
+                title="Simple Bookmarking"
+                id="tab1"
+                activeTab={activeTab}
+                setActiveTab={setActiveTab}
+              />
+
+              <TabNavItem
+                title="Speedy Searching"
+                id="tab2"
+                activeTab={activeTab}
+                setActiveTab={setActiveTab}
+              />
+
+              <TabNavItem
+                title="Easy Sharing"
+                id="tab3"
+                activeTab={activeTab}
+                setActiveTab={setActiveTab}
+              />
             </ul>
           </div>
           <div className="features-section__offers">
-            <div>
+            <TabContent id="tab1" activeTab={activeTab}>
               <div>
-                <img src={Illustration1} alt="Illustration" />
+                <div>
+                  <img src={Illustration1} alt="Illustration" />
+                </div>
               </div>
-            </div>
-            <div>
-              <h3>Bookmark in one click</h3>
-              <p>
-                Organize your bookmarks however you like. Our simple
-                drag-and-drop interface gives you complete control over how you
-                manage your favourite sites.
-              </p>
-              <button>More Info</button>
-            </div>
+              <div>
+                <h3>Bookmark in one click</h3>
+                <p>
+                  Organize your bookmarks however you like. Our simple
+                  drag-and-drop interface gives you complete control over how
+                  you manage your favourite sites.
+                </p>
+                <button>More Info</button>
+              </div>
+            </TabContent>
+            <TabContent id="tab2" activeTab={activeTab}>
+              <div>
+                <div>
+                  <img src={Illustration2} alt="Illustration" />
+                </div>
+              </div>
+              <div>
+                <h3>Intelligent search</h3>
+                <p>
+                  Our powerful search feature will help you find saved sites in
+                  no time at all. No need to trawl through all of your
+                  bookmarks.
+                </p>
+                <button>More Info</button>
+              </div>
+            </TabContent>
+            <TabContent id="tab3" activeTab={activeTab}>
+              <div>
+                <div>
+                  <img src={Illustration3} alt="Illustration" />
+                </div>
+              </div>
+              <div>
+                <h3>Share your bookmarks</h3>
+                <p>
+                  Easily share your bookmarks and collections with others.
+                  Create a shareable link that you can send at the click of a
+                  button.
+                </p>
+                <button>More Info</button>
+              </div>
+            </TabContent>
           </div>
         </div>
         <div className="features-section__shape"></div>
       </section>
-      {/* <div>
-        <ul>
-          <TabNavItem
-            title="Simple Bookmarking"
-            id="tab1"
-            className="Test"
-            activeTab={activeTab}
-            setActiveTab={setActiveTab}
-          />
-          <TabNavItem
-            title="Speedy Searching"
-            id="tab2"
-            activeTab={activeTab}
-            setActiveTab={setActiveTab}
-          />
-          <TabNavItem
-            title="Easy Sharing"
-            id="tab3"
-            activeTab={activeTab}
-            setActiveTab={setActiveTab}
-          />
-        </ul>
-
-        <div>
-          <TabContent id="tab1" activeTab={activeTab}>
-            <p>Tab 1 works!</p>
-          </TabContent>
-          <TabContent id="tab2" activeTab={activeTab}>
-            <p>Tab 2 works!</p>
-          </TabContent>
-          <TabContent id="tab3" activeTab={activeTab}>
-            <p>Tab 3 works!</p>
-          </TabContent>
-        </div>
-      </div> */}
     </>
   );
 };

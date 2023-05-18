@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import Logo from "../images/logo-bookmark.png";
-import Facebook from "../images/icon-facebook.svg";
-import Twitter from "../images/icon-twitter.svg";
 import BookMark from "../images/logo-bookmark-1.png";
 
 export default class Footer extends Component {
