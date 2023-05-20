@@ -1,16 +1,38 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import TabNavItem from "./TabNavItem";
 import TabContent from "./TabContent";
 import Illustration from "../images/illustration-hero.svg";
 import Illustration1 from "../images/illustration-features-tab-1.svg";
 import Illustration2 from "../images/illustration-features-tab-2.svg";
 import Illustration3 from "../images/illustration-features-tab-3.svg";
+
+export const item = {
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+  hiddenx: { x: 30, opacity: 0 },
+  visiblex: {
+    x: 0,
+    opacity: 1,
+  },
+};
+
 const Header = () => {
   const [activeTab, setActiveTab] = useState("tab1");
 
   return (
     <>
-      <header className="header-section">
+      <motion.header
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.7 }}
+        variants={item}
+        viewport={{ once: true, amount: 0.8 }}
+        className="header-section"
+      >
         <div className="header-section__illustration">
           <div></div>
         </div>
@@ -31,19 +53,32 @@ const Header = () => {
             <img src={Illustration} alt="Illustration" />
           </div>
         </div>
-      </header>
+      </motion.header>
 
       <section className="features-section">
         <div className="features-section__container">
-          <div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.7 }}
+            variants={item}
+            viewport={{ once: true, amount: 0.8 }}
+          >
             <h2>Features</h2>
             <p className="description">
               Our aim is to make it quick and easy for you to access your
               favourite websites. Your bookmarks sync between your devices so
               you can access them on the go.
             </p>
-          </div>
-          <div className="features-section__navigation">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.7 }}
+            variants={item}
+            viewport={{ once: true, amount: 0.8 }}
+            className="features-section__navigation"
+          >
             <ul>
               <TabNavItem
                 title="Simple Bookmarking"
@@ -66,15 +101,27 @@ const Header = () => {
                 setActiveTab={setActiveTab}
               />
             </ul>
-          </div>
+          </motion.div>
           <div className="features-section__offers">
             <TabContent id="tab1" activeTab={activeTab}>
-              <div>
+              <motion.div
+                initial="hiddenx"
+                whileInView="visiblex"
+                transition={{ duration: 0.7 }}
+                variants={item}
+                viewport={{ once: true, amount: 0.8 }}
+              >
                 <div>
                   <img src={Illustration1} alt="Illustration" />
                 </div>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+                initial="hiddenx"
+                whileInView="visiblex"
+                transition={{ duration: 0.7 }}
+                variants={item}
+                viewport={{ once: true, amount: 0.8 }}
+              >
                 <h3>Bookmark in one click</h3>
                 <p>
                   Organize your bookmarks however you like. Our simple
@@ -82,15 +129,27 @@ const Header = () => {
                   you manage your favourite sites.
                 </p>
                 <button>More Info</button>
-              </div>
+              </motion.div>
             </TabContent>
             <TabContent id="tab2" activeTab={activeTab}>
-              <div>
+              <motion.div
+                initial="hiddenx"
+                whileInView="visiblex"
+                transition={{ duration: 0.7 }}
+                variants={item}
+                viewport={{ once: true, amount: 0.8 }}
+              >
                 <div>
                   <img src={Illustration2} alt="Illustration" />
                 </div>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+                initial="hiddenx"
+                whileInView="visiblex"
+                transition={{ duration: 0.7 }}
+                variants={item}
+                viewport={{ once: true, amount: 0.8 }}
+              >
                 <h3>Intelligent search</h3>
                 <p>
                   Our powerful search feature will help you find saved sites in
@@ -98,15 +157,27 @@ const Header = () => {
                   bookmarks.
                 </p>
                 <button>More Info</button>
-              </div>
+              </motion.div>
             </TabContent>
             <TabContent id="tab3" activeTab={activeTab}>
-              <div>
+              <motion.div
+                initial="hiddenx"
+                whileInView="visiblex"
+                transition={{ duration: 0.7 }}
+                variants={item}
+                viewport={{ once: true, amount: 0.8 }}
+              >
                 <div>
                   <img src={Illustration3} alt="Illustration" />
                 </div>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+                initial="hiddenx"
+                whileInView="visiblex"
+                transition={{ duration: 0.7 }}
+                variants={item}
+                viewport={{ once: true, amount: 0.8 }}
+              >
                 <h3>Share your bookmarks</h3>
                 <p>
                   Easily share your bookmarks and collections with others.
@@ -114,7 +185,7 @@ const Header = () => {
                   button.
                 </p>
                 <button>More Info</button>
-              </div>
+              </motion.div>
             </TabContent>
           </div>
         </div>

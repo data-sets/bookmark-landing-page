@@ -1,14 +1,23 @@
 import React, { Component } from "react";
+import { motion } from "framer-motion";
 import Chrome from "../images/logo-chrome.svg";
 import Firefox from "../images/logo-firefox.svg";
 import Opera from "../images/logo-opera.svg";
 import Dot from "../images/bg-dots.svg";
+import { item } from "./Header";
 
 export default class Extensions extends Component {
   render() {
     return (
       <>
-        <section className="browser-extension-section">
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.7 }}
+          variants={item}
+          viewport={{ once: true, amount: 0.8 }}
+          className="browser-extension-section"
+        >
           <div className="browser-extension-section__container">
             <div>
               <h2>Download the extension</h2>
@@ -45,7 +54,7 @@ export default class Extensions extends Component {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
       </>
     );
   }
