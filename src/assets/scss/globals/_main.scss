@@ -595,6 +595,7 @@ ul {
 
             a {
               padding: 15px 15px;
+              width: 100%;
             }
           }
         }
@@ -646,6 +647,7 @@ ul {
         margin-bottom: 100px;
         li {
           padding-top: 20px;
+          width: 100%;
           button {
             color: v.$grayish-blue;
             &:hover {
