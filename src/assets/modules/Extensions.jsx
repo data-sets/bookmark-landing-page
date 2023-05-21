@@ -11,14 +11,7 @@ export default class Extensions extends Component {
     return (
       <>
         <section className="browser-extension-section">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 0.7 }}
-            variants={item}
-            viewport={{ once: true, amount: 0.8 }}
-            className="browser-extension-section__container"
-          >
+          <div className="browser-extension-section__container">
             <div>
               <h2>Download the extension</h2>
               <p>
@@ -27,7 +20,14 @@ export default class Extensions extends Component {
               </p>
             </div>
 
-            <div className="browser-extension-section__browser">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.7 }}
+              variants={item}
+              viewport={{ once: true, amount: 0.8 }}
+              className="browser-extension-section__browser"
+            >
               <div>
                 <img src={Chrome} alt="Chrome Logo" />
                 <h4>Add to Chrome</h4>
@@ -52,8 +52,8 @@ export default class Extensions extends Component {
                 <br />
                 <button>Add and Install Extension</button>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </section>
       </>
     );
