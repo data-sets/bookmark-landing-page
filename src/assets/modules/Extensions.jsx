@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import { motion } from "framer-motion";
 import Chrome from "../images/logo-chrome.svg";
 import Firefox from "../images/logo-firefox.svg";
 import Opera from "../images/logo-opera.svg";
 import Dot from "../images/bg-dots.svg";
+import { item } from "./Header";
 
 export default class Extensions extends Component {
   render() {
@@ -18,31 +20,48 @@ export default class Extensions extends Component {
               </p>
             </div>
 
-            <div className="browser-extension-section__browser">
-              <div>
+            <div
+              className="browser-extension-section__browser"
+            >
+              <motion.div
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.7 }}
+              variants={item}
+              viewport={{ once: true, amount: 0.8 }}>
                 <img src={Chrome} alt="Chrome Logo" />
                 <h4>Add to Chrome</h4>
                 <p>Minimum version 62</p>
                 <img src={Dot} alt="Dot Illustration" />
                 <br />
                 <button>Add and Install Extension</button>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.7 }}
+              variants={item}
+              viewport={{ once: true, amount: 0.8 }}>
                 <img src={Firefox} alt="Firefox Logo" />
                 <h4>Add to Firefox</h4>
                 <p>Minimum version 55</p>
                 <img src={Dot} alt="Dot Illustration" />
                 <br />
                 <button>Add and Install Extension</button>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.7 }}
+              variants={item}
+              viewport={{ once: true, amount: 0.8 }}>
                 <img src={Opera} alt="Opera Logo" />
                 <h4>Add to Opera</h4>
                 <p>Minimum version 46</p>
                 <img src={Dot} alt="Dot Illustration" />
                 <br />
                 <button>Add and Install Extension</button>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
