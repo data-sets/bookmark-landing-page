@@ -180,7 +180,6 @@ ul {
     background-color: v.$soft-blue;
     width: 45%;
     height: 350px;
-
     border-top-right-radius: 180px;
     border-bottom-right-radius: 180px;
     z-index: -1;
@@ -644,8 +643,10 @@ ul {
         border-block: 1px solid v.$grayish-blue;
         margin-inline: 25px;
         margin-bottom: 100px;
-        li {
+
+        * {
           padding-top: 20px;
+          width: 100%;
           button {
             color: v.$grayish-blue;
             &:hover {
