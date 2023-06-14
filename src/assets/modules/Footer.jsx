@@ -7,7 +7,7 @@ export default class Footer extends Component {
   render() {
     return (
       <>
-        <motion.section
+        <section
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.7 }}
@@ -23,8 +23,8 @@ export default class Footer extends Component {
               <button>Contact Us</button>
             </div>
           </div>
-        </motion.section>
-        <motion.section
+        </section>
+        <section
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.7 }}
@@ -66,7 +66,7 @@ export default class Footer extends Component {
               </ul>
             </div>
           </div>
-        </motion.section>
+        </section>
       </>
     );
   }

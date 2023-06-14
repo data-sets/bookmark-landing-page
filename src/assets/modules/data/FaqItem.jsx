@@ -21,7 +21,7 @@ const FaqItem = ({ faq }) => {
             <img className="arrow" src={Arrow} alt="Arrow Icon" />
           ) : (
             <img src={Arrow} alt="Arrow Icon" />
-          )}{" "}
+          )}
         </span>
       </button>
 
