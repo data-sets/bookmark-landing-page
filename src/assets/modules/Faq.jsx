@@ -51,8 +51,8 @@ export default class Faq extends Component {
                   <FaqItem key={index} faq={faq} />
                 ))}
               </ul>
-              <div className="btn-container">
-                <button className="btn-container__btn">More Info</button>
+              <div>
+                <button>More Info</button>
               </div>
             </div>
           </motion.div>

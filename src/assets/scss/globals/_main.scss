@@ -56,9 +56,7 @@ ul {
 
 .nav-section {
   padding-top: 50px;
-  .hide-for-desktop {
-    display: none;
-  }
+
   &__content {
     display: flex;
     justify-content: space-between;
@@ -68,6 +66,9 @@ ul {
       gap: 40px;
       text-transform: uppercase;
       font-size: 16px;
+      &:last-child{
+        display: none;
+      }
       li {
         a {
           transition: 1s;
@@ -282,89 +283,87 @@ ul {
   }
 }
 
-.TabContent {
+.tabcontent {
   position: relative;
   display: grid;
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 50px;
-}
-
-.browser-extension-section {
-  &__container {
-    width: 100%;
-    max-width: 1104px;
-    margin: 0 auto;
-    font-size: inherit;
-    div {
+  &__browser-extension-section {
+    &--container {
       width: 100%;
-      &:first-child {
-        text-align: center;
+      max-width: 1104px;
+      margin: 0 auto;
+      font-size: inherit;
+      div {
+        width: 100%;
+        &:first-child {
+          text-align: center;
+
+          width: 100%;
+          margin: 0 auto;
+          padding-inline: 30px;
+          padding-block-end: 35px;
+          h2 {
+            padding-bottom: 20px;
+          }
+          p {
+            line-height: 1.7;
+          }
+        }
+      }
+    }
+    &--browser {
+      display: grid;
+      text-align: center;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 34px;
+      position: relative;
+
+      button {
+        background-color: v.$soft-blue;
+        color: v.$white;
+        padding: 20px 40px;
+        font-family: inherit;
+        margin-top: 20px;
+        border-radius: 5px;
+        transition: 0.2s;
+        &:hover {
+          background-color: v.$white;
+          color: v.$soft-blue;
+          border: 2px solid v.$soft-blue;
+        }
+      }
+
+      div {
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+          0 4px 6px -4px rgb(0 0 0 / 0.1);
+        padding: 40px 5px 20px 5px;
+        word-wrap: break-word;
 
         width: 100%;
-        margin: 0 auto;
-        padding-inline: 30px;
-        padding-block-end: 35px;
-        h2 {
-          padding-bottom: 20px;
+        border-radius: 15px;
+        img {
+          &:first-child {
+            margin-bottom: 20px;
+          }
         }
-        p {
-          line-height: 1.7;
+        h4 {
+          font-weight: bold;
         }
-      }
-    }
-  }
-  &__browser {
-    display: grid;
-    text-align: center;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 34px;
-    position: relative;
-
-    button {
-      background-color: v.$soft-blue;
-      color: v.$white;
-      padding: 20px 40px;
-      font-family: inherit;
-      margin-top: 20px;
-      border-radius: 5px;
-      transition: 0.2s;
-      &:hover {
-        background-color: v.$white;
-        color: v.$soft-blue;
-        border: 2px solid v.$soft-blue;
-      }
-    }
-
-    div {
-      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-        0 4px 6px -4px rgb(0 0 0 / 0.1);
-      padding: 40px 5px 20px 5px;
-      word-wrap: break-word;
-
-      width: 100%;
-      border-radius: 15px;
-      img {
-        &:first-child {
-          margin-bottom: 20px;
+        &:nth-child(2) {
+          position: relative;
+          top: 40px;
         }
-      }
-      h4 {
-        font-weight: bold;
-      }
-      &:nth-child(2) {
-        position: relative;
-        top: 40px;
-      }
-      &:nth-child(3) {
-        position: relative;
-        top: 80px;
+        &:nth-child(3) {
+          position: relative;
+          top: 80px;
+        }
       }
     }
   }
 }
-
 .faq-section {
   position: relative;
   margin-top: 230px;
@@ -418,7 +417,7 @@ ul {
               border-bottom: 1px solid #d7d7d7;
             }
             button {
-              font-size: 0.920rem;
+              font-size: 0.92rem;
               text-align: left;
               display: flex;
               flex-wrap: wrap;
@@ -434,21 +433,21 @@ ul {
                 color: v.$soft-red;
               }
             }
-            .answer_wrapper {
-              height: 0;
-              overflow: hidden;
-              transition: height ease 0.2s;
-              .answer {
-                text-align: left;
-                padding: 20px 6px;
-                color: v.$grayish-blue;
-                line-height: 1.7;
-                font-size: 0.925rem;
-              }
-            }
           }
         }
       }
+    }
+  }
+  &__answer_wrapper {
+    height: 0;
+    overflow: hidden;
+    transition: height ease 0.2s;
+    &--answer {
+      text-align: left;
+      padding: 20px 6px;
+      color: v.$grayish-blue;
+      line-height: 1.7;
+      font-size: 0.925rem;
     }
   }
 }
@@ -666,11 +665,13 @@ ul {
   .nav-section {
     padding: 20px 20px;
     &__content {
-      .hide-for-mobile {
-        display: none;
-      }
-      .hide-for-desktop {
-        display: block;
+      ul {
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(3) {
+          display: block;
+        }
       }
     }
   }

@@ -16,7 +16,7 @@ export default class Navigation extends Component {
             <div>
               <img src={Logo} alt="Book Mark Logo" />
             </div>
-            <ul className="hide-for-mobile">
+            <ul>
               <li>
                 <Link
                   activeClass="active"
@@ -60,7 +60,7 @@ export default class Navigation extends Component {
                 <a href="/">Login</a>
               </li>
             </ul>
-            <ul className="hide-for-desktop">
+            <ul>
               <button>
                 <img src={Menu} alt="Hamburger Menu" />
               </button>

@@ -10,8 +10,8 @@ export default class Extensions extends Component {
   render() {
     return (
       <>
-        <section className="browser-extension-section">
-          <div className="browser-extension-section__container">
+        <section className="tabcontent__browser-extension-section">
+          <div className="tabcontent__browser-extension-section--container">
             <div>
               <h2>Download the extension</h2>
               <p>
@@ -21,7 +21,7 @@ export default class Extensions extends Component {
             </div>
 
             <div
-              className="browser-extension-section__browser"
+              className="tabcontent__browser-extension-section--browser"
             >
               <motion.div
               initial="hidden"

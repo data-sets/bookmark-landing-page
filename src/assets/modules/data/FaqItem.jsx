@@ -27,14 +27,14 @@ const FaqItem = ({ faq }) => {
 
       <div
         ref={contentEl}
-        className="answer_wrapper"
+        className="faq-section__answer_wrapper"
         style={
           clicked
             ? { height: contentEl.current.scrollHeight }
             : { height: "0px" }
         }
       >
-        <div className="answer">{answer}</div>
+        <div className="faq-section__answer_wrapper--answer">{answer}</div>
       </div>
     </li>
   );
