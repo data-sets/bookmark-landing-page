@@ -1,7 +1,64 @@
 import React, { Component } from "react";
 import Logo from "../images/logo-bookmark.svg";
-import Menu from "../images/icon-hamburger.svg";
+import LogoWhite from "../images/logo-bookmark-white.png";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { slide as Menubar } from "react-burger-menu";
+
+let styles = {
+  bmBurgerBarsHover: {
+    background: "#a90000",
+  },
+  bmCrossButton: {
+    height: "24px",
+    width: "24px",
+    right: "44px",
+    top: "18px",
+  },
+  bmCross: {
+    background: "white",
+    width: "3px",
+    height: "25px",
+  },
+  bmMenuWrap: {
+    position: "fixed",
+    height: "100%",
+    width: "100%",
+    top: 0,
+  },
+  bmMenu: {
+    background: "rgb(37, 43, 70, 0.9)",
+    fontSize: "1.15em",
+    top: "0",
+    height: "100vh",
+  },
+  bmMorphShape: {
+    fill: "#373a47",
+  },
+  bmItemList: {
+    color: "#b8b7ad",
+    padding: "0.8em",
+  },
+  bmItem: {
+    display: "inline-block",
+    padding: "30px",
+    margin: "70px 0 0 0",
+  },
+  bmOverlay: {
+    background: "none",
+  },
+
+  bmBurgerBars: {
+    background: "black",
+  },
+
+  bmBurgerButton: {
+    position: "absolute",
+    width: "20px",
+    height: "18px",
+    right: "36px",
+    top: "26px",
+  },
+};
 
 export default class Navigation extends Component {
   scrollToTop = () => {
@@ -61,9 +118,37 @@ export default class Navigation extends Component {
               </li>
             </ul>
             <ul>
-              <button>
-                <img src={Menu} alt="Hamburger Menu" />
-              </button>
+              <Menubar styles={styles} right active fallDown>
+                <div className="nav-section__logo">
+                  <img src={LogoWhite} alt="Book Mark Logo" />
+                </div>
+                <ul className="nav-section__menu-list">
+                  <li>
+                    <Link to="/">features</Link>
+                  </li>
+                  <li>
+                    <Link to="/pricing">pricing</Link>
+                  </li>
+                  <li>
+                    <Link to="/contact">contact</Link>
+                  </li>
+                  <li>
+                    <Link to="/login">login</Link>
+                  </li>
+                </ul>
+                <ul className="nav-section__social-media">
+                  <li>
+                    <a href="/">
+                      <i className="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/">
+                      <i className="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                </ul>
+              </Menubar>
             </ul>
           </div>
         </nav>

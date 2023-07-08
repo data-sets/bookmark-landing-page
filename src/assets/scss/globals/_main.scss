@@ -57,6 +57,56 @@ ul {
 .nav-section {
   padding-top: 50px;
   margin-inline: 20px;
+  &__logo {
+    position: absolute;
+    top: -80px;
+    left: -10px;
+    img {
+      width: 150px;
+    }
+  }
+  &__menu-list {
+    width: 100%;
+    li {
+      border-bottom: 1px solid #322222;
+      text-align: center;
+      padding: 20px 0;
+      color: v.$white;
+      font-size: 20px;
+
+      &:first-child {
+        border-top: 1px solid #9a9a9a;
+      }
+      &:last-child {
+        border-bottom: none;
+        a {
+          display: inline-block;
+          width: 100%;
+          background-color: transparent !important;
+          border: 3px solid v.$white;
+        }
+      }
+    }
+  }
+  &__social-media {
+    display: flex !important;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 180px 0 0 !important;
+    li {
+      a {
+        color: v.$white;
+        font-size: 30px;
+      }
+      &:last-child {
+        a {
+          background-color: transparent !important;
+          padding: 0 !important;
+          box-shadow: none !important;
+        }
+      }
+    }
+  }
   &__content {
     display: flex;
     justify-content: space-between;
@@ -306,8 +356,8 @@ ul {
 
           width: 100%;
           margin: 0 auto;
-          padding-inline: 30px;
-          padding-block-end: 35px;
+          // padding-inline: 30px;
+          // padding-block-end: 35px;
           h2 {
             padding-bottom: 20px;
           }
@@ -397,6 +447,7 @@ ul {
         div {
           display: grid;
           justify-content: center;
+          text-align: justify;
           button {
             background: v.$soft-blue;
             color: v.$white;
@@ -677,7 +728,7 @@ ul {
     }
   }
   .nav-section {
-    padding: 20px 20px;
+    padding: 20px 0;
     &__content {
       ul {
         &:nth-child(2) {
