@@ -1,9 +1,13 @@
 import React, { Component } from "react";
-import { motion } from "framer-motion";
 import Logo from "../images/logo-bookmark.png";
-import BookMark from "../images/logo-bookmark-1.png";
 import { item } from "./Header";
+import { Link, animateScroll as scroll } from "react-scroll";
+
 export default class Footer extends Component {
+  scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
   render() {
     return (
       <>
@@ -14,6 +18,7 @@ export default class Footer extends Component {
           variants={item}
           viewport={{ once: true, amount: 0.8 }}
           className="footer-contact-section"
+          id="contact"
         >
           <div className="footer-contact-section__container">
             <h5>35,000+ ALREADY JOINED</h5>
@@ -41,13 +46,13 @@ export default class Footer extends Component {
                   </a>
                 </li>
                 <li>
-                  <a href="/">Features</a>
+                  <Link to="/features">Features</Link>
                 </li>
                 <li>
-                  <a href="/">Pricing</a>
+                  <Link to="/pricing">Pricing</Link>
                 </li>
                 <li>
-                  <a href="/">Contact</a>
+                  <Link to="/contact">Contact</Link>
                 </li>
               </ul>
             </div>

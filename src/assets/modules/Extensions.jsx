@@ -10,7 +10,7 @@ export default class Extensions extends Component {
   render() {
     return (
       <>
-        <section className="tabcontent__browser-extension-section">
+        <section className="tabcontent__browser-extension-section" id="pricing">
           <div className="tabcontent__browser-extension-section--container">
             <div>
               <h2>Download the extension</h2>
@@ -20,15 +20,14 @@ export default class Extensions extends Component {
               </p>
             </div>
 
-            <div
-              className="tabcontent__browser-extension-section--browser"
-            >
+            <div className="tabcontent__browser-extension-section--browser">
               <motion.div
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 0.7 }}
-              variants={item}
-              viewport={{ once: true, amount: 0.8 }}>
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 0.7 }}
+                variants={item}
+                viewport={{ once: true, amount: 0.8 }}
+              >
                 <img src={Chrome} alt="Chrome Logo" />
                 <h4>Add to Chrome</h4>
                 <p>Minimum version 62</p>
@@ -37,11 +36,12 @@ export default class Extensions extends Component {
                 <button>Add and Install Extension</button>
               </motion.div>
               <motion.div
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 0.7 }}
-              variants={item}
-              viewport={{ once: true, amount: 0.8 }}>
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 0.7 }}
+                variants={item}
+                viewport={{ once: true, amount: 0.8 }}
+              >
                 <img src={Firefox} alt="Firefox Logo" />
                 <h4>Add to Firefox</h4>
                 <p>Minimum version 55</p>
@@ -50,11 +50,12 @@ export default class Extensions extends Component {
                 <button>Add and Install Extension</button>
               </motion.div>
               <motion.div
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 0.7 }}
-              variants={item}
-              viewport={{ once: true, amount: 0.8 }}>
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 0.7 }}
+                variants={item}
+                viewport={{ once: true, amount: 0.8 }}
+              >
                 <img src={Opera} alt="Opera Logo" />
                 <h4>Add to Opera</h4>
                 <p>Minimum version 46</p>

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Logo from "../images/logo-bookmark.svg";
 import LogoWhite from "../images/logo-bookmark-white.png";
-import { Link, animateScroll as scroll } from "react-scroll";
 import { slide as Menubar } from "react-burger-menu";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 let styles = {
   bmBurgerBarsHover: {
@@ -46,16 +46,14 @@ let styles = {
   bmOverlay: {
     background: "none",
   },
-
   bmBurgerBars: {
     background: "black",
   },
-
   bmBurgerButton: {
     position: "absolute",
     width: "20px",
     height: "18px",
-    right: "36px",
+    right: "19px",
     top: "26px",
   },
 };
@@ -124,13 +122,43 @@ export default class Navigation extends Component {
                 </div>
                 <ul className="nav-section__menu-list">
                   <li>
-                    <Link to="/">features</Link>
+                    <Link
+                      activeClass="active"
+                      to="features"
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={500}
+                      onClick={this.scrollToTop}
+                    >
+                      Features
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/pricing">pricing</Link>
+                    <Link
+                      activeClass="active"
+                      to="pricing"
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={500}
+                      onClick={this.scrollToTop}
+                    >
+                      Pricing
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/contact">contact</Link>
+                    <Link
+                      activeClass="active"
+                      to="contact"
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={500}
+                      onClick={this.scrollToTop}
+                    >
+                      Contact
+                    </Link>
                   </li>
                   <li>
                     <Link to="/login">login</Link>

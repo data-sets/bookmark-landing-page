@@ -63,6 +63,7 @@ const Header = () => {
             transition={{ duration: 0.7 }}
             variants={item}
             viewport={{ once: true, amount: 0.8 }}
+            id="features"
           >
             <h2>Features</h2>
             <p className="description">
