@@ -12,7 +12,7 @@ export default class Extensions extends Component {
       <>
         <section className="tabcontent__browser-extension-section" id="pricing">
           <div className="tabcontent__browser-extension-section--container">
-            <div>
+            <div className="tabcontent__browser-extension-section--description">
               <h2>Download the extension</h2>
               <p>
                 We’ve got more browsers in the pipeline. Please do let us know

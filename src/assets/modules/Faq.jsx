@@ -19,7 +19,7 @@ export const faqs = [
       "Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.",
   },
   {
-    question: "What about other Chromium browsers?",
+    question: "What about Chromium browsers?",
     answer:
       "Blanditiis aliquid adipisci quisquam reiciendis voluptates itaque. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.",
   },
