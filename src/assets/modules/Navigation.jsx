@@ -11,7 +11,7 @@ let styles = {
   bmCrossButton: {
     height: "24px",
     width: "24px",
-    right: "44px",
+    right: "28px",
     top: "18px",
   },
   bmCross: {
@@ -79,7 +79,6 @@ export default class Navigation extends Component {
                   spy={true}
                   smooth={true}
                   offset={-70}
-                  duration={500}
                   onClick={this.scrollToTop}
                 >
                   Features
@@ -92,7 +91,6 @@ export default class Navigation extends Component {
                   spy={true}
                   smooth={true}
                   offset={-70}
-                  duration={500}
                   onClick={this.scrollToTop}
                 >
                   Pricing
@@ -105,7 +103,6 @@ export default class Navigation extends Component {
                   spy={true}
                   smooth={true}
                   offset={-70}
-                  duration={500}
                   onClick={this.scrollToTop}
                 >
                   Contact
@@ -128,7 +125,6 @@ export default class Navigation extends Component {
                       spy={true}
                       smooth={true}
                       offset={-70}
-                      duration={500}
                       onClick={this.scrollToTop}
                     >
                       Features
@@ -141,7 +137,6 @@ export default class Navigation extends Component {
                       spy={true}
                       smooth={true}
                       offset={-70}
-                      duration={500}
                       onClick={this.scrollToTop}
                     >
                       Pricing
@@ -154,7 +149,6 @@ export default class Navigation extends Component {
                       spy={true}
                       smooth={true}
                       offset={-70}
-                      duration={500}
                       onClick={this.scrollToTop}
                     >
                       Contact
