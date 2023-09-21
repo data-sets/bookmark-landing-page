@@ -60,7 +60,7 @@ export default class Footer extends Component {
               <ul>
                 <li>
                   <a href="/">
-                    <i className="fa fa-facebook"></i>
+                    <i className="fa fa-facebook-square"></i>
                   </a>
                 </li>
                 <li>
