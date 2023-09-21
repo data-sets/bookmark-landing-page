@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { motion } from "framer-motion";
 import FaqItem from "../modules/data/FaqItem";
 import { item } from "./Header";
 
@@ -29,7 +30,14 @@ export default class Faq extends Component {
     return (
       <>
         <section className="faq-section">
-          <div className="faq-section__container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.7 }}
+            variants={item}
+            viewport={{ once: true, amount: 0.8 }}
+            className="faq-section__container"
+          >
             <div>
               <h2>Frequently Asked Questions</h2>
               <p>
@@ -47,7 +55,7 @@ export default class Faq extends Component {
                 <button>More Info</button>
               </div>
             </div>
-          </div>
+          </motion.div>
         </section>
       </>
     );

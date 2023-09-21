@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import TabNavItem from "./TabNavItem";
 import TabContent from "./TabContent";
 import Illustration from "../images/illustration-hero.svg";
@@ -24,7 +25,14 @@ const Header = () => {
 
   return (
     <>
-      <header role="banner" className="header-section">
+      <motion.header
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.7 }}
+        variants={item}
+        viewport={{ once: true, amount: 0.8 }}
+        className="header-section"
+      >
         <div className="header-section__illustration">
           <div></div>
         </div>
@@ -45,13 +53,16 @@ const Header = () => {
             <img src={Illustration} alt="Illustration" />
           </div>
         </div>
-      </header>
+      </motion.header>
 
       <section className="features-section">
         <div className="features-section__container">
-          <div
-            id="features"
-            className="features-section__container--description"
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.7 }}
+            variants={item}
+            viewport={{ once: true, amount: 0.8 }}
           >
             <h2>Features</h2>
             <p className="description">
@@ -59,8 +70,15 @@ const Header = () => {
               favourite websites. Your bookmarks sync between your devices so
               you can access them on the go.
             </p>
-          </div>
-          <div className="features-section__navigation">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.7 }}
+            variants={item}
+            viewport={{ once: true, amount: 0.8 }}
+            className="features-section__navigation"
+          >
             <ul>
               <TabNavItem
                 title="Simple Bookmarking"
@@ -83,15 +101,27 @@ const Header = () => {
                 setActiveTab={setActiveTab}
               />
             </ul>
-          </div>
+          </motion.div>
           <div className="features-section__offers">
             <TabContent id="tab1" activeTab={activeTab}>
-              <div>
+              <motion.div
+                initial="hiddenx"
+                whileInView="visiblex"
+                transition={{ duration: 0.7 }}
+                variants={item}
+                viewport={{ once: true, amount: 0.8 }}
+              >
                 <div>
                   <img src={Illustration1} alt="Illustration" />
                 </div>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+                initial="hiddenx"
+                whileInView="visiblex"
+                transition={{ duration: 0.7 }}
+                variants={item}
+                viewport={{ once: true, amount: 0.8 }}
+              >
                 <h3>Bookmark in one click</h3>
                 <p>
                   Organize your bookmarks however you like. Our simple
@@ -99,10 +129,10 @@ const Header = () => {
                   you manage your favourite sites.
                 </p>
                 <button>More Info</button>
-              </div>
+              </motion.div>
             </TabContent>
             <TabContent id="tab2" activeTab={activeTab}>
-              <div
+              <motion.div
                 initial="hiddenx"
                 whileInView="visiblex"
                 transition={{ duration: 0.7 }}
@@ -112,8 +142,8 @@ const Header = () => {
                 <div>
                   <img src={Illustration2} alt="Illustration" />
                 </div>
-              </div>
-              <div
+              </motion.div>
+              <motion.div
                 initial="hiddenx"
                 whileInView="visiblex"
                 transition={{ duration: 0.7 }}
@@ -127,10 +157,10 @@ const Header = () => {
                   bookmarks.
                 </p>
                 <button>More Info</button>
-              </div>
+              </motion.div>
             </TabContent>
             <TabContent id="tab3" activeTab={activeTab}>
-              <div
+              <motion.div
                 initial="hiddenx"
                 whileInView="visiblex"
                 transition={{ duration: 0.7 }}
@@ -140,8 +170,8 @@ const Header = () => {
                 <div>
                   <img src={Illustration3} alt="Illustration" />
                 </div>
-              </div>
-              <div
+              </motion.div>
+              <motion.div
                 initial="hiddenx"
                 whileInView="visiblex"
                 transition={{ duration: 0.7 }}
@@ -155,7 +185,7 @@ const Header = () => {
                   button.
                 </p>
                 <button>More Info</button>
-              </div>
+              </motion.div>
             </TabContent>
           </div>
         </div>

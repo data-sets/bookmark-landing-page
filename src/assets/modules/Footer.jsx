@@ -21,7 +21,7 @@ export default class Footer extends Component {
           id="contact"
         >
           <div className="footer-contact-section__container">
-            <p>35,000+ ALREADY JOINED</p>
+            <h5>35,000+ ALREADY JOINED</h5>
             <h2>Stay up-to-date with what we’re doing</h2>
             <div>
               <input type="text" placeholder="Enter your email address" />
@@ -29,8 +29,7 @@ export default class Footer extends Component {
             </div>
           </div>
         </section>
-        <footer
-          role="contentinfo"
+        <section
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.7 }}
@@ -42,7 +41,7 @@ export default class Footer extends Component {
             <div>
               <ul>
                 <li>
-                  <a href="/" aria-label="Logo image">
+                  <a href="/">
                     <img src={Logo} alt="Logo" />
                   </a>
                 </li>
@@ -60,19 +59,19 @@ export default class Footer extends Component {
             <div>
               <ul>
                 <li>
-                  <a href="/" aria-label="Facebook Link">
+                  <a href="/">
                     <i className="fa fa-facebook-square"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="/" aria-label="Twitter Link">
+                  <a href="/">
                     <i className="fa fa-twitter"></i>
                   </a>
                 </li>
               </ul>
             </div>
           </div>
-        </footer>
+        </section>
       </>
     );
   }
