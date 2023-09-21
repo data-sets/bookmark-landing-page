@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="header-section">
+      <header role="banner" className="header-section">
         <div className="header-section__illustration">
           <div></div>
         </div>

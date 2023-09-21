@@ -66,7 +66,7 @@ export default class Navigation extends Component {
   render() {
     return (
       <>
-        <nav className="nav-section">
+        <nav role="navigation" className="nav-section">
           <div className="nav-section__content container">
             <div>
               <img src={Logo} alt="Book Mark Logo" />
@@ -160,12 +160,12 @@ export default class Navigation extends Component {
                 </ul>
                 <ul className="nav-section__social-media">
                   <li>
-                    <a href="/">
+                    <a href="/" aria-label="Facebook Link">
                       <i className="fa fa-facebook"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="/">
+                    <a href="/" aria-label="Facebook Link">
                       <i className="fa fa-twitter"></i>
                     </a>
                   </li>

@@ -32,7 +32,7 @@ button {
 
 h1 {
   color: v.$very-dark-blue;
-  font-size: 2.125rem;
+  font-size: 2.325rem;
 }
 h2 {
   color: v.$very-dark-blue;
@@ -69,7 +69,6 @@ ul {
   &__menu-list {
     width: 100%;
     li {
-
       text-align: center;
       padding: 20px 0;
       color: v.$white;
@@ -149,7 +148,7 @@ ul {
 
 .header-section {
   position: relative;
-  padding-top: 80px;
+  padding-top: 110px;
 
   &__container {
     width: 100%;
@@ -554,9 +553,10 @@ ul {
       color: v.$white;
       padding: 0 50px;
     }
-    h5 {
+    p {
       font-weight: normal;
       padding-bottom: 30px;
+      color: v.$white;
     }
 
     div {
